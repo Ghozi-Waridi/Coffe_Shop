@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "70326337410",
+    "project_id": "projectmobile-e51bc",
+    "storage_bucket": "projectmobile-e51bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70326337410:android:4e1ff14426b7fd84bf599b",
+        "android_client_info": {
+          "package_name": "com.example.project_prak_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp0DYM1ndqiscIUAWIQOKJ0CiTX8uV17o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
