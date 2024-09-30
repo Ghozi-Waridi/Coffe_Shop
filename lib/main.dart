@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       getPages: Routes.routes,  
       debugShowCheckedModeBanner: false,
-      home: OrderPage(),
+      home: LoginPage(),
     );
   }
 }
