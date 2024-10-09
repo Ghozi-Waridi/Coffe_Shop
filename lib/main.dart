@@ -5,9 +5,7 @@ import 'package:project_prak_mobile/Presentation/Pages/Login_page.dart';
 import 'package:project_prak_mobile/Presentation/Pages/Order_page.dart';
 import 'Core/Routers/Router.dart';
 
-
-
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
@@ -19,9 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      getPages: Routes.routes,  
+      getPages: Routes.routes,
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: LoginPage()
     );
   }
 }

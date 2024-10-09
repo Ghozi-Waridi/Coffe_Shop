@@ -26,11 +26,13 @@ class Button_Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        if(link_page == "/Home"){
-          Get.offNamed("/Home");
-        } else {
-          Get.toNamed(link_page!);
-        }
+        // if(link_page == "/Home"){
+        //   Get.offNamed("/Home");
+        // } else {
+        //   Get.offNamed(link_page!);
+        // }
+
+        Get.offNamed(link_page!);
       },
       child: Container(
         padding: EdgeInsets.all(padding_value),

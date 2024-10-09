@@ -11,7 +11,7 @@ class Routes {
 
   static List<GetPage> routes = [
     GetPage(
-      name: start,
+      name: "/splash",
       page: () => const Splash_Page(),
     ),
     GetPage(
@@ -30,7 +30,7 @@ class Routes {
     ),
     GetPage(
       name: "/Order",
-      page: () => const OrderPage(),
+      page: () => const OrderPage(name: "Kopi",price: 12,),
     ),
   ];
 }

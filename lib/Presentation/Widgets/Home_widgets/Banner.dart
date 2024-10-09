@@ -9,7 +9,6 @@ class Banner_Widget extends StatelessWidget {
         left: 20,
         top: 150,
         child: Container(
-
           height: 170,
           width: 350,
           decoration: BoxDecoration(

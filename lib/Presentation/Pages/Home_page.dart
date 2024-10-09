@@ -41,7 +41,6 @@ class _Home_PageState extends State<Home_Page> {
 
     try {
       final List<DataEnty> data = await datarepository.getDataEntry();
-
       setState(() {
         coffeList = data;
       });

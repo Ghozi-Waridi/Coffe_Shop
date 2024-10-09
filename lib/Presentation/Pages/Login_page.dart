@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_prak_mobile/Presentation/Widgets/global_Component/Button.dart';
 import '../Colors.dart' as cl;
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -29,8 +30,8 @@ class _LoginPageState extends State<LoginPage> {
         child: Center(
           child: Container(
             padding: const EdgeInsets.all(20),
-            height: height / 1.5,
-            width: width / 1.2,
+            height: height / 1.2,
+            width: width / 1.1,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border: Border.all(color: Colors.black, width: 2),
@@ -52,8 +53,9 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
+                SvgPicture.asset("Assets/Images/coffee bean-bro.svg", height: 230,),
                 _isLoginForm ? _buildLoginForm(width) : _buildSignInForm(width),
                 const SizedBox(
                   height: 30,
@@ -62,11 +64,6 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: _showForm,
                   child: Text(_isLoginForm ? "Sign In" : "Login"),
                 ),
-
-                // ElevatedButton(
-                //   onPressed: () {},
-                //   child: Text("Login"),
-                // ),
               ],
             )),
           ),
@@ -111,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
             color_button: Colors.black,
             border_radius: 10,
             width: width,
-            link_page: "link_page",
+            link_page: "/splash",
             font_size: 20,
             padding_value: 10)
       ],
@@ -168,7 +165,7 @@ class _LoginPageState extends State<LoginPage> {
             color_button: Colors.black,
             border_radius: 10,
             width: width,
-            link_page: "link_page",
+            link_page: "/splash",
             font_size: 20,
             padding_value: 10)
       ],
