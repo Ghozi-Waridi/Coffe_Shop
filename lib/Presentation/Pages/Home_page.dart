@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:project_prak_mobile/Data/DataSource/Data_coffe_source.dart';
+import 'package:project_prak_mobile/Data/DataSource/firebase/firebase_auth_data_source.dart';
 import 'package:project_prak_mobile/Domain/Entities/Data_Enty.dart';
-import 'package:project_prak_mobile/Domain/Repositories/Data_Coffe_Repo.dart';
+import 'package:project_prak_mobile/Data/Repositories/Data_Coffe_Repo.dart';
 import 'package:project_prak_mobile/Domain/Repositories/Data_Repo.dart';
 import 'package:project_prak_mobile/Presentation/Widgets/Home_widgets/Banner.dart';
 import 'package:project_prak_mobile/Presentation/Widgets/Home_widgets/Produck%20List/Card_product.dart';
 import 'package:project_prak_mobile/Presentation/Widgets/Home_widgets/Search_icons_header.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase;
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import '../Widgets/Home_widgets/Produck List/Product_List.dart';
 
 class Home_Page extends StatefulWidget {
@@ -17,6 +20,7 @@ class Home_Page extends StatefulWidget {
 }
 
 class _Home_PageState extends State<Home_Page> {
+  final FirebaseAuthDataSourceImpl _firebaseAuthDataSourceImpl = FirebaseAuthDataSourceImpl(firebaseAuth: firebase.FirebaseAuth.instance);
   late DataRepository datarepository;
   List<DataEnty> coffeList = [];
   bool isLoading = false;
@@ -66,6 +70,13 @@ class _Home_PageState extends State<Home_Page> {
             : SingleChildScrollView(
                 child: Column(
                   children: [
+                    IconButton(onPressed: () async{
+                      await _firebaseAuthDataSourceImpl.logoutUser();
+                      SharedPreferences prefs = await SharedPreferences.getInstance();
+                      prefs.setBool("isLogger", false);
+                      prefs.remove("userToken");
+                      Navigator.pushReplacementNamed(context, "/");
+                    }, icon: Icon(Icons.logout)),
                     Container(
                       child: const Search_icons_header(),
                     ),

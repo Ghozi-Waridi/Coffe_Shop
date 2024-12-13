@@ -3,7 +3,6 @@ import 'package:project_prak_mobile/Data/Model/Data_model.dart';
 import 'package:project_prak_mobile/Domain/Entities/Data_Enty.dart';
 import 'package:project_prak_mobile/Domain/Repositories/Data_Repo.dart';
 
-
 class Data_Coffe_Repo_impl implements DataRepository {
   final Data_Coffe_Source data_coffe_source;
 

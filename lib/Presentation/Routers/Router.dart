@@ -10,13 +10,14 @@ class Routes {
   static String getStartRoute() => start;
 
   static List<GetPage> routes = [
+    
     GetPage(
       name: "/splash",
-      page: () => const Splash_Page(),
+      page: () => Splash_Page(),
     ),
     GetPage(
       name: "/Home",
-      page: () => const Home_Page(),
+      page: () => Home_Page(),
     ),
     GetPage(
       name: "/Detail",
